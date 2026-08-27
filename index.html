@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday 🎂</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Quicksand:wght@400;500;600;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="fireflies" id="fireflies"></div>
+
+<!-- audio: replace src with her song -->
+<audio id="bgm" loop>
+  <source src="Dooran.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ================= 1. LOCK SCREEN ================= -->
+<section class="screen active" id="lock">
+  <div class="clock" id="clockDisplay">00:00</div>
+  <div class="sub">Birthday Surprise</div>
+  <div class="lockicon">🔒</div>
+  <div>Enter the secret code</div>
+  <div class="pin-dots" id="pinDots">
+    <span></span><span></span><span></span><span></span>
+  </div>
+  <div class="keypad" id="keypad"></div>
+  <div class="hint">Demo PIN: <b id="pinHintText">2006</b></div>
+</section>
+
+<!-- ================= 2. GIFT BOX ================= -->
+<section class="screen" id="gift">
+  <h2>A surprise awaits you… 🌟</h2>
+  <div class="sub">Something special, just for you</div>
+  <div class="giftbox" id="giftBox">🎁</div>
+  <div class="tap-hint">Tap the gift to open</div>
+</section>
+
+<!-- ================= 3. CAKE / STATS ================= -->
+<section class="screen" id="cake">
+  <h1 id="cakeTitle">Happy Birthday Bestie 🎂</h1>
+  <div class="sub">The world's more fun since you're in it 💛</div>
+  <div class="stat-grid" id="statGrid"></div>
+  <div class="cake" id="cakeEmoji">🎂</div>
+  <div class="tap-hint" id="cakeHint">Tap the cake to blow the candles</div>
+  <button class="btn" id="toLetterBtn" style="display:none;">Continue ➜</button>
+</section>
+
+<!-- ================= 4. LETTER ================= -->
+<section class="screen" id="letter">
+  <div class="sub">💌</div>
+  <h2>A Letter Just For You</h2>
+  <div class="envelope" id="envelope"><div class="seal">💛</div></div>
+  <div class="tap-hint">Tap to open</div>
+  <div class="letter-card" id="letterCard">
+    <p id="letterBody">Dear best friend,</p>
+    <div class="signoff">— your ride or die, always</div>
+  </div>
+  <button class="btn" id="toBalloonsBtn" style="display:none;">Continue ➜</button>
+</section>
+
+<!-- ================= 5. BALLOONS ================= -->
+<section class="screen" id="balloons">
+  <h2>Pop the Wishes 🎈</h2>
+  <div class="sub">Tap each balloon to reveal a birthday wish</div>
+  <div class="balloon-field" id="balloonField"></div>
+  <div class="progress-pill" id="balloonProgress">Popped 0/6</div>
+  <button class="btn" id="toMemoriesBtn" style="display:none;">Continue ➜</button>
+</section>
+
+<!-- ================= 6. MEMORIES ================= -->
+<section class="screen" id="memories">
+  <h2>Cute Memories 📸</h2>
+  <div class="memory-card" id="memoryCard">
+    <div class="cap" id="memoryCap"></div>
+  </div>
+  <div class="dots" id="memoryDots"></div>
+  <div class="swipe-row">
+    <button class="btn ghost" id="memPrev">◀</button>
+    <button class="btn" id="memNext">Next Surprise ➜</button>
+  </div>
+</section>
+
+<!-- ================= 7. PUZZLE ================= -->
+<section class="screen" id="puzzle">
+  <h2>Birthday Puzzle 🧩</h2>
+  <div class="sub">Solve to unlock a special message ➜</div>
+  <div class="puzzle-wrap">
+    <div class="puzzle-info" id="puzzleMoves">0 Moves</div>
+    <div class="puzzle-grid" id="puzzleGrid"></div>
+  </div>
+  <button class="btn ghost" id="shuffleBtn">🔀 Shuffle Again</button>
+  <button class="btn" id="toScratchBtn" style="display:none;">Continue ➜</button>
+</section>
+
+<!-- ================= 8. SCRATCH CARD ================= -->
+<section class="screen" id="scratch">
+  <h2>One Last Surprise ✨</h2>
+  <div class="sub">Scratch the golden card to reveal it</div>
+  <div class="scratch-wrap">
+    <div class="scratch-under" id="scratchMsg">Happy Birthday!<br><span style="font-size:1rem;">Cheers to another year of us being unstoppable 🥳</span></div>
+    <canvas id="scratchCanvas" width="260" height="180"></canvas>
+  </div>
+  <div class="nav-note">Made with love, just for you 💛</div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
