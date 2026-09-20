@@ -19,10 +19,10 @@ const CONFIG = {
   ],
 
   memories: [
-    { img: "sh1.jpeg", caption: "That random Sunday hangout 🌇" },
-    { img: "sh2.jpeg", caption: "Our go-to café corner ☕" },
-    { img: "sh3.jpeg", caption: "The bonfire night we still talk about 🔥" },
-    { img: "sh6.jpeg", caption: "Stargazing & overthinking life 🌌" }
+    { img: "sh1.jpeg",  },
+    { img: "sh2.jpeg",  },
+    { img: "sh3.jpeg",  },
+    { img: "sh6.jpeg", caption: "Those random moments that become beautiful memories 🤍” 🌌" }
   ],
 
   puzzleImage: "sh1.jpeg",
